@@ -1,3 +1,4 @@
+import time
 """
 Problem 3: Largest prime factor
 The prime factors of 13195 are 5, 7, 13 and 29.
@@ -38,6 +39,10 @@ def largestPrimeFactor(n):
 
     return prime
 
+start = time.perf_counter_ns()
+
 if __name__ == "__main__":
     n = 600851475143
     print(largestPrimeFactor(n))
+
+    print(f'Completed in: {(time.perf_counter_ns() - start)/1000 }us')
